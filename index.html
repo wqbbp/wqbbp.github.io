@@ -181,6 +181,68 @@
 
 <div class="post">
 
+    <a href="/2022/10/14/Hexo在页脚添加总访问量和访客数/">
+        <h2>
+            Hexo在页脚添加总访问量和访客数
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/10/14
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h2 id="Hexo在页脚添加总访问量和访客数"><a href="#Hexo在页脚添加总访问量和访客数" class="headerlink" title="Hexo在页脚添加总访问量和访客数"></a>Hexo在页脚添加总访问量和访客数</h2><h3 id="打开站点配置文件-config-yml添加"><a href="#打开站点配置文件-config-yml添加" class="headerlink" title="打开站点配置文件 _config.yml添加"></a>打开站点配置文件 _config.yml添加</h3><pre><code>busuanzi:
+enable: true
+</code></pre>
+<h3 id="在对应的footer-ejs下添加"><a href="#在对应的footer-ejs下添加" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 13px&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0&quot;&gt;
+    &lt;script src=&quot;https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0&quot;&gt;&lt;/script&gt;
+    &lt;script async=&quot;&quot; src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+    本站总访问量  &lt;a id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/a&gt; 次,
+    本站访客数&lt;a id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/a&gt;人次
+&lt;/div&gt;
+</code></pre>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Hexo" style=color:#ff7d73>
+                Hexo
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2022/10/14/Hexo在页脚添加总访问量和访客数/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/10/14/Hexo写作/">
         <h2>
             Hexo写作
@@ -299,7 +361,7 @@ myblog/public目录下是执行hexo g命令后生成的主页
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#1bccbc>
+            <a href="/tags/Hexo" style=color:#00bcd4>
                 Hexo
             </a>
         </span>
@@ -371,7 +433,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#120;&#x78;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#x78;&#x78;&#120;&#x78;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#120;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -483,7 +545,7 @@ hexo d
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#ffa2c4>
+            <a href="/tags/Hexo" style=color:#1bccbc>
                 Hexo
             </a>
         </span>
@@ -573,8 +635,15 @@ hexo d
         <div></div>
         <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/jwdnh">jwdnh Engine</a> 
 		</div>
-        
+        		
     </div>
+	<div style="font-size: 0.8125rem">
+	            <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0"><script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
+	            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+	    </div>
+
+
 
 </footer>
 
