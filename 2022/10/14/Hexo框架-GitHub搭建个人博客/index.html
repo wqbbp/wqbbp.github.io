@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芥川龙之介</title>
+    <title>芥川龙之介Hexo框架+GitHub搭建个人博客</title>
     <meta name="author" content="Akutagawa Ryunosuke">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -149,48 +149,13 @@
                 </div>
 
                 <div id="main">
-                    <div id="home-head" style=background-image:url('bg7.jpg')>
-    <script>
-        var menu = document.getElementById("menu")
-        menu.className += " menu-color"
-    </script>
-     
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>芥川龙之介</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>Hexo框架+GitHub搭建个人博客 </h1>
     </div>
-     
-</div>
-
-
-
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-
-        <div id="posts">
-            
-
-<div class="post">
-
-    <a href="/2022/10/14/Hexo框架-GitHub搭建个人博客/">
-        <h2>
-            Hexo框架+GitHub搭建个人博客
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
@@ -198,13 +163,13 @@
             2022/10/14
         </span>
 
+        
+
+        
     </div>
 
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><h3 id="安装Hexo前置准备"><a href="#安装Hexo前置准备" class="headerlink" title="安装Hexo前置准备"></a>安装Hexo前置准备</h3><pre><code>需要先安装node.js(版本尽量是最新版本)和git软件。
+    <div class="content" v-pre>
+        <h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><h3 id="安装Hexo前置准备"><a href="#安装Hexo前置准备" class="headerlink" title="安装Hexo前置准备"></a>安装Hexo前置准备</h3><pre><code>需要先安装node.js(版本尽量是最新版本)和git软件。
 查询node版本：在命令提示符下输入：node -v
 进入Git页面：右键鼠标，点击 Git Bash
 </code></pre>
@@ -270,154 +235,8 @@ hexo d
 <p>最后回到github上查看自己的仓库看看是否部署成功</p>
 <p>将_config.yml文件的url处修改为自己GitHub的地址，如：url: <a href="https://jwdnh.github.io/">https://jwdnh.github.io</a><br>这样输入这个地址打开的就是你的网页了</p>
 
-            
-        </div>
     </div>
 
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2022/10/14/Hexo框架-GitHub搭建个人博客/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2022/10/10/Hexo基本命令/">
-        <h2>
-            Hexo基本命令
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/10/10
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>记录一下Hexo的一些基本命令</p>
-<h2 id="Hexo的一些基本命令"><a href="#Hexo的一些基本命令" class="headerlink" title="Hexo的一些基本命令"></a>Hexo的一些基本命令</h2><h3 id="创建一个新的页面"><a href="#创建一个新的页面" class="headerlink" title="创建一个新的页面"></a>创建一个新的页面</h3><pre><code class="bash">$ hexo new post [标题]
-</code></pre>
-<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><pre><code class="bash">$ hexo cl/$ hexo clean
-</code></pre>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre><code class="bash">$ hexo g/$ hexo generate
-</code></pre>
-<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><pre><code class="bash">$ hexo s/$ hexo server
-</code></pre>
-<h3 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h3><pre><code class="bash">$ hexo publish [layout] &lt;filename&gt;
-</code></pre>
-<h3 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<h3 id="渲染文件"><a href="#渲染文件" class="headerlink" title="渲染文件"></a>渲染文件</h3><pre><code class="bash">$ hexo render &lt;file1&gt; [file2] ...
-</code></pre>
-<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><p>显示 source&#x2F;_drafts 文件夹中的草稿文章。</p>
-<pre><code class="bash">$ hexo --draft
-</code></pre>
-<p>我的GitHub: <a target="_blank" rel="noopener" href="https://github.com/jwdnh">GitHub</a></p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        <span class="icon">
-            <a-icon type="tags" theme="filled" />
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/Hexo" style=color:#1bccbc>
-                Hexo
-            </a>
-        </span>
-        
-    </div>
-
-    <a href="/2022/10/10/Hexo基本命令/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-
-             
-<div class="page-current">
-
-    <div class="prev">
-        
-    </div>
-
-    <div class="page-index">
-
-        
-
-        <span class="current">
-            1
-        </span>
-
-        
-
-    </div>
-
-    <div class="next">
-        
-    </div>
-
-</div>
-
-        </div>
-    </div>
-    
-    <div id="home-card">
-        <a-affix :offset-top="card_top">
-    <a-card class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src="/images/54.png " alt="头像">
-        </div>
-        <div class="name">
-            Akutagawa Ryunosuke
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                星辰的流转正如人世的沧桑，未必尽是赏心乐事。
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/jwdnh">
-
-                    
-                    <a-icon type="github"
-                        theme="filled" />
-                    
-                </a>
-            </span>
-            
-        </div>
-        <div class="friend-links">
-            
-        </div>
-    </a-card>
-</a-affix>
-    </div>
     
 </div>
                      
