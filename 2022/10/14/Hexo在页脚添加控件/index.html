@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芥川龙之介 || Hexo在页脚添加总访问量和访客数</title>
+    <title>芥川龙之介 || Hexo在页脚添加总访问量,访客数和站点运行时间</title>
     <meta name="author" content="Akutagawa Ryunosuke">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -153,7 +153,7 @@
 <link rel="stylesheet" href="/css/post-body.css">
 <div class="article">
     <div>
-        <h1>Hexo在页脚添加总访问量和访客数 </h1>
+        <h1>Hexo在页脚添加总访问量,访客数和站点运行时间 </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -174,7 +174,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style=color:#ff7d73>
+                <a href="/tags/Hexo" style=color:#1bccbc>
                     Hexo
                 </a>
             </span>
@@ -193,6 +193,45 @@ enable: true
     &lt;script async=&quot;&quot; src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
     本站总访问量  &lt;a id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/a&gt; 次,
     本站访客数&lt;a id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/a&gt;人次
+&lt;/div&gt;
+</code></pre>
+<h2 id="Hexo在页脚添加站点运行时间"><a href="#Hexo在页脚添加站点运行时间" class="headerlink" title="Hexo在页脚添加站点运行时间"></a>Hexo在页脚添加站点运行时间</h2><h3 id="在对应的footer-ejs下添加-1"><a href="#在对应的footer-ejs下添加-1" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 0.9rem&quot;&gt;
+    &lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
+    &lt;script language=javascript&gt;
+            function siteTime()&#123;
+                    window.setTimeout(&quot;siteTime()&quot;, 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth()+1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+                    year - 作为date对象的年份，为4位年份值
+                    month - 0-11之间的整数，做为date对象的月份
+                    day - 1-31之间的整数，做为date对象的天数
+                    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+                    minutes - 0-59之间的整数，做为date对象的分钟数
+                    seconds - 0-59之间的整数，做为date对象的秒数
+                    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+                    var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+                    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                    var diff = t2-t1;
+                    var diffYears = Math.floor(diff/years);
+                    var diffDays = Math.floor((diff/days)-diffYears*365);
+                    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                    document.getElementById(&quot;sitetime&quot;).innerHTML=&quot; 本站已运行&quot;+/*diffYears+&quot; 年 &quot;+*/diffDays+&quot; 天 &quot;+diffHours+&quot; 小时 &quot;+diffMinutes+&quot; 分钟 &quot;+diffSeconds+&quot; 秒&quot;;
+            &#125;
+            siteTime();
+    &lt;/script&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -214,11 +253,51 @@ enable: true
 		</div>
         		
     </div>
-	<div style="font-size: 0.8125rem">
-	            <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0"><script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
-	            本站访客数<a id="busuanzi_value_site_uv"></a>人次
-	    </div>
+	<div style="font-size: 0.9rem">
+		<span id="sitetime"></span>
+		<script language=javascript>
+		        function siteTime(){
+		                window.setTimeout("siteTime()", 1000);
+		                var seconds = 1000;
+		                var minutes = seconds * 60;
+		                var hours = minutes * 60;
+		                var days = hours * 24;
+		                var years = days * 365;
+		                var today = new Date();
+		                var todayYear = today.getFullYear();
+		                var todayMonth = today.getMonth()+1;
+		                var todayDate = today.getDate();
+		                var todayHour = today.getHours();
+		                var todayMinute = today.getMinutes();
+		                var todaySecond = today.getSeconds();
+		                /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		                year - 作为date对象的年份，为4位年份值
+		                month - 0-11之间的整数，做为date对象的月份
+		                day - 1-31之间的整数，做为date对象的天数
+		                hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		                minutes - 0-59之间的整数，做为date对象的分钟数
+		                seconds - 0-59之间的整数，做为date对象的秒数
+		                microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		                var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+		                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		                var diff = t2-t1;
+		                var diffYears = Math.floor(diff/years);
+		                var diffDays = Math.floor((diff/days)-diffYears*365);
+		                var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		                var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		                var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		                document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+		        }
+		        siteTime();
+		</script>
+	</div>
+	<div style="font-size: 0.8125rem">		
+	    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
+		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
+		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
+	    本站访客数<a id="busuanzi_value_site_uv"></a>人次
+	</div>
 
 
 

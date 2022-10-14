@@ -181,9 +181,9 @@
 
 <div class="post">
 
-    <a href="/2022/10/14/Hexo在页脚添加总访问量和访客数/">
+    <a href="/2022/10/14/Hexo在页脚添加控件/">
         <h2>
-            Hexo在页脚添加总访问量和访客数
+            Hexo在页脚添加总访问量,访客数和站点运行时间
         </h2>
     </a>
 
@@ -215,6 +215,45 @@ enable: true
     本站访客数&lt;a id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/a&gt;人次
 &lt;/div&gt;
 </code></pre>
+<h2 id="Hexo在页脚添加站点运行时间"><a href="#Hexo在页脚添加站点运行时间" class="headerlink" title="Hexo在页脚添加站点运行时间"></a>Hexo在页脚添加站点运行时间</h2><h3 id="在对应的footer-ejs下添加-1"><a href="#在对应的footer-ejs下添加-1" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 0.9rem&quot;&gt;
+    &lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
+    &lt;script language=javascript&gt;
+            function siteTime()&#123;
+                    window.setTimeout(&quot;siteTime()&quot;, 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth()+1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+                    year - 作为date对象的年份，为4位年份值
+                    month - 0-11之间的整数，做为date对象的月份
+                    day - 1-31之间的整数，做为date对象的天数
+                    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+                    minutes - 0-59之间的整数，做为date对象的分钟数
+                    seconds - 0-59之间的整数，做为date对象的秒数
+                    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+                    var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+                    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                    var diff = t2-t1;
+                    var diffYears = Math.floor(diff/years);
+                    var diffDays = Math.floor((diff/days)-diffYears*365);
+                    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                    document.getElementById(&quot;sitetime&quot;).innerHTML=&quot; 本站已运行&quot;+/*diffYears+&quot; 年 &quot;+*/diffDays+&quot; 天 &quot;+diffHours+&quot; 小时 &quot;+diffMinutes+&quot; 分钟 &quot;+diffSeconds+&quot; 秒&quot;;
+            &#125;
+            siteTime();
+    &lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
 
             
         </div>
@@ -229,14 +268,14 @@ enable: true
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#ff7d73>
+            <a href="/tags/Hexo" style=color:#879cff>
                 Hexo
             </a>
         </span>
         
     </div>
 
-    <a href="/2022/10/14/Hexo在页脚添加总访问量和访客数/ " class="go-post">
+    <a href="/2022/10/14/Hexo在页脚添加控件/ " class="go-post">
         阅读全文
     </a>
 </div>
@@ -291,7 +330,7 @@ enable: true
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#879cff>
+            <a href="/tags/Hexo" style=color:#ff7d73>
                 Hexo
             </a>
         </span>
@@ -361,7 +400,7 @@ myblog/public目录下是执行hexo g命令后生成的主页
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#00bcd4>
+            <a href="/tags/Hexo" style=color:#879cff>
                 Hexo
             </a>
         </span>
@@ -433,7 +472,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#120;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#120;&#x78;&#64;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#x78;&#x78;&#120;&#x78;&#64;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -475,7 +514,7 @@ hexo d
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#ff7d73>
+            <a href="/tags/Hexo" style=color:#879cff>
                 Hexo
             </a>
         </span>
@@ -545,7 +584,7 @@ hexo d
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#1bccbc>
+            <a href="/tags/Hexo" style=color:#ffa2c4>
                 Hexo
             </a>
         </span>
@@ -637,11 +676,51 @@ hexo d
 		</div>
         		
     </div>
-	<div style="font-size: 0.8125rem">
-	            <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0"><script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
-	            本站访客数<a id="busuanzi_value_site_uv"></a>人次
-	    </div>
+	<div style="font-size: 0.9rem">
+		<span id="sitetime"></span>
+		<script language=javascript>
+		        function siteTime(){
+		                window.setTimeout("siteTime()", 1000);
+		                var seconds = 1000;
+		                var minutes = seconds * 60;
+		                var hours = minutes * 60;
+		                var days = hours * 24;
+		                var years = days * 365;
+		                var today = new Date();
+		                var todayYear = today.getFullYear();
+		                var todayMonth = today.getMonth()+1;
+		                var todayDate = today.getDate();
+		                var todayHour = today.getHours();
+		                var todayMinute = today.getMinutes();
+		                var todaySecond = today.getSeconds();
+		                /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		                year - 作为date对象的年份，为4位年份值
+		                month - 0-11之间的整数，做为date对象的月份
+		                day - 1-31之间的整数，做为date对象的天数
+		                hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		                minutes - 0-59之间的整数，做为date对象的分钟数
+		                seconds - 0-59之间的整数，做为date对象的秒数
+		                microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		                var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+		                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		                var diff = t2-t1;
+		                var diffYears = Math.floor(diff/years);
+		                var diffDays = Math.floor((diff/days)-diffYears*365);
+		                var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		                var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		                var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		                document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+		        }
+		        siteTime();
+		</script>
+	</div>
+	<div style="font-size: 0.8125rem">		
+	    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
+		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
+		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
+	    本站访客数<a id="busuanzi_value_site_uv"></a>人次
+	</div>
 
 
 
