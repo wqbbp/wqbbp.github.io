@@ -219,7 +219,9 @@
 检查是否安装成功：hexo -v
 </code></pre>
 <p>检查是否能够启动：hexo s<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init1.jpg" alt="检查是否能够启动"></p>
-<h2 id="将Hexo部署到Github"><a href="#将Hexo部署到Github" class="headerlink" title="将Hexo部署到Github"></a>将Hexo部署到Github</h2><h3 id="Github建立个人仓库"><a href="#Github建立个人仓库" class="headerlink" title="Github建立个人仓库"></a>Github建立个人仓库</h3><pre><code>首先，需要有一个github账号。登上账号后建一个仓库：仓库名为你的用户名.github.io，
+<h2 id="将Hexo部署到Github"><a href="#将Hexo部署到Github" class="headerlink" title="将Hexo部署到Github"></a>将Hexo部署到Github</h2><h3 id="Github建立个人仓库"><a href="#Github建立个人仓库" class="headerlink" title="Github建立个人仓库"></a>Github建立个人仓库</h3><pre><code>为什么选择GitHub而不是Gitee，Gitee需要实名认证（手持身份证照上传），比较麻烦。
+GitHub可能有访问慢等缺点，好处就是注册好后立马就能操作，之后如果自己有域名也方便替换。
+首先，需要有一个github账号。登上账号后建一个仓库：仓库名为你的用户名.github.io，
 举例如下：
 创建一个和你用户名相同的仓库，后面加.github.io，
 只有这样，将来要部署到GitHub的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名.（我这里已经建立过了）
@@ -237,7 +239,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#x78;&#x78;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#x78;&#x78;&#x78;&#x78;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#120;&#x78;&#x78;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#120;&#120;&#x78;&#x78;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -338,7 +340,7 @@ hexo d
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#879cff>
+            <a href="/tags/Hexo" style=color:#ffa2c4>
                 Hexo
             </a>
         </span>
