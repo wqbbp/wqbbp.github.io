@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芥川龙之介Hexo</title>
+    <title>芥川龙之介Hexo框架+particle主题</title>
     <meta name="author" content="Akutagawa Ryunosuke">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -150,150 +150,63 @@
 
                 <div id="main">
                      
-<div class="categories-tags">
-    
-    <div class="all-s">
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>Hexo框架+particle主题 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/10/14
+        </span>
+
         
+
         
-        <span>
-            <a href="/tags/Hexo/" style='background:linear-gradient(to right, #fbc2eb 0%, #bbd4ff 100%)'>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Hexo
-            </a>
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo" style=color:#879cff>
+                    Hexo
+                </a>
+            </span>
+            
         </span>
         
-        
     </div>
-    <div id="archives">
-        
-        <a-timeline>
-            <a-timeline-item color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2022/10/14</div>
-                    <a href="/2022/10/14/Hexo写作/">
-                        <h3>Hexo写作</h3>
-                    </a>
-                    <div class="info">
-                        
 
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" theme="filled" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Hexo" style=color:#ff7d73>
-                                    Hexo
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        <a-timeline>
-            <a-timeline-item color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2022/10/10</div>
-                    <a href="/2022/10/10/Hexo基本命令/">
-                        <h3>Hexo基本命令</h3>
-                    </a>
-                    <div class="info">
-                        
+    <div class="content" v-pre>
+        <h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
+<p>下载主题，我一般习惯在themes文件夹下打开命令提示符页面</p>
+<pre><code class="cmd">git clone https://github.com/korilin/hexo-theme-particle.git particle
+</code></pre>
+<p>这个是该主题的说明：<a target="_blank" rel="noopener" href="https://korilin.github.io/hexo-theme-particle-demo/full/public/">particle主题</a></p>
+<p>打开站点配置文件 _config.yml<br>鼠标拖到最下面，将主题名称修改为particle</p>
+<pre><code># Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: particle
+</code></pre>
+<p>以后如果选择其他主题的话，可以在themes文件夹下下载主题之后进入配置文件替换</p>
+<h4 id="该主题的一些注意事项："><a href="#该主题的一些注意事项：" class="headerlink" title="该主题的一些注意事项："></a>该主题的一些注意事项：</h4><pre><code>通过命令生成博文.md后可以在myblog/source/_posts目录下修改博文
+myblog/public目录下是执行hexo g命令后生成的主页
+在myblog/themes/particle/layout里修改页面的格式
+在myblog/themes/particle/source/css/maiden-color.styl里修改样式的颜色
+在myblog/themes/particle/source/_config.yml里修改页面(在同级目录下新建images文件夹，将照片保存至此处)
+在myblog/_config.yml里修改title和author
+</code></pre>
 
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" theme="filled" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Hexo" style=color:#ffa2c4>
-                                    Hexo
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        <a-timeline>
-            <a-timeline-item color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2022/10/14</div>
-                    <a href="/2022/10/14/Hexo框架-GitHub搭建个人博客/">
-                        <h3>Hexo框架+GitHub搭建个人博客</h3>
-                    </a>
-                    <div class="info">
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" theme="filled" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Hexo" style=color:#1bccbc>
-                                    Hexo
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        <a-timeline>
-            <a-timeline-item color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2022/10/14</div>
-                    <a href="/2022/10/14/Hexo框架-particle主题/">
-                        <h3>Hexo框架+particle主题</h3>
-                    </a>
-                    <div class="info">
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" theme="filled" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Hexo" style=color:#00bcd4>
-                                    Hexo
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
     </div>
-    <script>
-        new Vue({
-            el: '#archives'
-        })
-    </script>
+
+    
 </div>
                      
 <footer id="footer">
