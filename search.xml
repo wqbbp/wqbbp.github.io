@@ -20,8 +20,35 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo在页脚添加总访问量,访客数和站点运行时间</title>
-    <url>/2022/10/14/Hexo%E5%9C%A8%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F,%E8%AE%BF%E5%AE%A2%E6%95%B0%E5%92%8C%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</url>
+    <title>Hexo基本命令</title>
+    <url>/2022/10/10/Hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>记录一下Hexo的一些基本命令</p>
+<h2 id="Hexo的一些基本命令"><a href="#Hexo的一些基本命令" class="headerlink" title="Hexo的一些基本命令"></a>Hexo的一些基本命令</h2><h3 id="创建一个新的页面"><a href="#创建一个新的页面" class="headerlink" title="创建一个新的页面"></a>创建一个新的页面</h3><pre><code class="bash">$ hexo new post [标题]
+</code></pre>
+<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><pre><code class="bash">$ hexo cl/$ hexo clean
+</code></pre>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre><code class="bash">$ hexo g/$ hexo generate
+</code></pre>
+<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><pre><code class="bash">$ hexo s/$ hexo server
+</code></pre>
+<h3 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h3><pre><code class="bash">$ hexo publish [layout] &lt;filename&gt;
+</code></pre>
+<h3 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<h3 id="渲染文件"><a href="#渲染文件" class="headerlink" title="渲染文件"></a>渲染文件</h3><pre><code class="bash">$ hexo render &lt;file1&gt; [file2] ...
+</code></pre>
+<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><p>显示 source&#x2F;_drafts 文件夹中的草稿文章。</p>
+<pre><code class="bash">$ hexo --draft
+</code></pre>
+<p>我的GitHub: <a href="https://github.com/jwdnh">GitHub</a></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo在页脚添加总访问量访客数和站点运行时间</title>
+    <url>/2022/10/14/Hexo%E5%9C%A8%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F%E8%AE%BF%E5%AE%A2%E6%95%B0%E5%92%8C%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</url>
     <content><![CDATA[<h2 id="Hexo在页脚添加总访问量和访客数"><a href="#Hexo在页脚添加总访问量和访客数" class="headerlink" title="Hexo在页脚添加总访问量和访客数"></a>Hexo在页脚添加总访问量和访客数</h2><h3 id="打开站点配置文件-config-yml添加"><a href="#打开站点配置文件-config-yml添加" class="headerlink" title="打开站点配置文件 _config.yml添加"></a>打开站点配置文件 _config.yml添加</h3><pre><code>busuanzi:
 enable: true
 </code></pre>
@@ -78,33 +105,6 @@ enable: true
       </tags>
   </entry>
   <entry>
-    <title>Hexo基本命令</title>
-    <url>/2022/10/10/Hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>记录一下Hexo的一些基本命令</p>
-<h2 id="Hexo的一些基本命令"><a href="#Hexo的一些基本命令" class="headerlink" title="Hexo的一些基本命令"></a>Hexo的一些基本命令</h2><h3 id="创建一个新的页面"><a href="#创建一个新的页面" class="headerlink" title="创建一个新的页面"></a>创建一个新的页面</h3><pre><code class="bash">$ hexo new post [标题]
-</code></pre>
-<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><pre><code class="bash">$ hexo cl/$ hexo clean
-</code></pre>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><pre><code class="bash">$ hexo g/$ hexo generate
-</code></pre>
-<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><pre><code class="bash">$ hexo s/$ hexo server
-</code></pre>
-<h3 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h3><pre><code class="bash">$ hexo publish [layout] &lt;filename&gt;
-</code></pre>
-<h3 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<h3 id="渲染文件"><a href="#渲染文件" class="headerlink" title="渲染文件"></a>渲染文件</h3><pre><code class="bash">$ hexo render &lt;file1&gt; [file2] ...
-</code></pre>
-<h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><p>显示 source&#x2F;_drafts 文件夹中的草稿文章。</p>
-<pre><code class="bash">$ hexo --draft
-</code></pre>
-<p>我的GitHub: <a href="https://github.com/jwdnh">GitHub</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo框架+GitHub搭建个人博客</title>
     <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><h3 id="安装Hexo前置准备"><a href="#安装Hexo前置准备" class="headerlink" title="安装Hexo前置准备"></a>安装Hexo前置准备</h3><pre><code>需要先安装node.js(版本尽量是最新版本)和git软件。
@@ -142,7 +142,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#120;&#x78;&#120;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#120;&#64;&#x71;&#113;&#x2e;&#x63;&#x6f;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#120;&#120;&#x78;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#120;&#120;&#120;&#x78;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
