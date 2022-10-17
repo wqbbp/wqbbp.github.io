@@ -362,43 +362,48 @@ a {
   width: 100px;
   height: 100px;
 }
-#home-card .card-style .name {
+#home-card img:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(270deg);
+}
+#home-card img:hover .name {
   margin: 10px auto;
   color: #1e3e3f;
   text-transform: capitalize;
 }
-#home-card .card-style .descriptions {
+#home-card img:hover .descriptions {
   margin: 20px auto;
   width: 85%;
 }
-#home-card .card-style .icon-links {
+#home-card img:hover .icon-links {
   width: 85%;
   margin: 10px auto;
   padding: 8px 15px;
   border-top: #cdcdcd solid 1px;
   border-bottom: #cdcdcd solid 1px;
 }
-#home-card .card-style .icon-links a {
+#home-card img:hover .icon-links a {
   color: #5c6b72;
   font-size: 18px;
   padding: 3px 5px;
   border-radius: 5px;
 }
-#home-card .card-style .icon-links a:hover {
+#home-card img:hover .icon-links a:hover {
   color: #fff;
   background: #66afef;
 }
-#home-card .card-style .icon-links .icon-link {
+#home-card img:hover .icon-links .icon-link {
   margin: 5px;
 }
-#home-card .card-style .friend-links {
+#home-card img:hover .friend-links {
   margin: 30px auto;
 }
-#home-card .card-style .friend-links .friend-link {
+#home-card img:hover .friend-links .friend-link {
   margin: 5px auto;
   text-align: center;
 }
-#home-card .card-style .friend-links .friend-link a {
+#home-card img:hover .friend-links .friend-link a {
   display: inline-block;
   width: 140px;
   line-height: 3;
@@ -406,7 +411,7 @@ a {
   font-size: 16px;
   border-radius: 15px;
 }
-#home-card .card-style .friend-links .friend-link a:hover {
+#home-card img:hover .friend-links .friend-link a:hover {
   background: linear-gradient(120deg, #96ceff 0, #ff9edb 100%);
   color: #fff;
 }

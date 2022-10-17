@@ -147,7 +147,7 @@
 
 </nav>
                 </div>
-
+				
                 <div id="main">
                     <div id="home-head" style=background-image:url('bg7.jpg')>
     <script>
@@ -181,6 +181,73 @@
 
 <div class="post">
 
+    <a href="/2022/10/14/前端学习经验/">
+        <h2>
+            前端学习经验
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2022/10/14
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h2 id="前端学习经验"><a href="#前端学习经验" class="headerlink" title="前端学习经验"></a>前端学习经验</h2><h4 id="页面显示与隐藏"><a href="#页面显示与隐藏" class="headerlink" title="页面显示与隐藏"></a>页面显示与隐藏</h4><pre><code>先在div标签中将display属性设置成none
+然后对js进行操作,用var xx = document.getElementById(&quot;xx&quot;);
+获取某个id,接着通过xx.style.display = &quot;block&quot;
+将页面设置成显示，值为none表示隐藏
+</code></pre>
+<h4 id="scroll的一些知识"><a href="#scroll的一些知识" class="headerlink" title="scroll的一些知识"></a>scroll的一些知识</h4><pre><code>document.documentElement.scrollHeight是当前页面的高度
+document.documentElement.scrollTop是scroll的实时高度
+scroll的最大高度=document.documentElement.scrollHeight-document.documentElement.clientHeight
+通过如下代码实时获取scroll状态
+</code></pre>
+<pre><code class="js">window.addEventListener(&#39;scroll&#39;, function (e) &#123;	
+&#125;)
+</code></pre>
+<h4 id="img标签包裹span样式实现"><a href="#img标签包裹span样式实现" class="headerlink" title="img标签包裹span样式实现"></a>img标签包裹span样式实现</h4><pre><code>在包裹他们的div标签中设置position:fixed,并将z-index设置一个比主页面大的值（如9999）
+通过bottom和right等属性来固定它的位置
+</code></pre>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/前端" style=color:#879cff>
+                前端
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2022/10/14/前端学习经验/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
     <a href="/2022/10/14/Hexo在页脚添加总访问量访客数和站点运行时间/">
         <h2>
             Hexo在页脚添加总访问量访客数和站点运行时间
@@ -208,10 +275,13 @@
 enable: true
 </code></pre>
 <h3 id="在对应的footer-ejs下添加"><a href="#在对应的footer-ejs下添加" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 13px&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; 
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0&quot;&gt;
+    &lt;script src=&quot;https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0&quot;&gt;&lt;/script&gt;
+    &lt;script async=&quot;&quot; src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+    本站总访问量  &lt;a id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/a&gt; 次,
+    本站访客数&lt;a id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/a&gt;人次
+&lt;/div&gt;
 </code></pre>
-<p>href&#x3D;”<a target="_blank" rel="noopener" href="https://widget.heweather.net/standard/static/css/he-standard.css">https://widget.heweather.net/standard/static/css/he-standard.css</a>?<br>v&#x3D;1.4.0”&gt;<br>        <script src="https://widget.heweather.net/standard/static/js/he-standard.js?
-v=1.4.0"></script><br>        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><br>        本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,<br>        本站访客数<a id="busuanzi_value_site_uv"></a>人次<br>    </p>
 <h2 id="Hexo在页脚添加站点运行时间"><a href="#Hexo在页脚添加站点运行时间" class="headerlink" title="Hexo在页脚添加站点运行时间"></a>Hexo在页脚添加站点运行时间</h2><h3 id="在对应的footer-ejs下添加-1"><a href="#在对应的footer-ejs下添加-1" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 0.9rem&quot;&gt;
         &lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
         &lt;script language=javascript&gt;
@@ -280,7 +350,7 @@ diffMinutes*minutes)/seconds);
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#ff7d73>
+            <a href="/tags/Hexo" style=color:#ffa2c4>
                 Hexo
             </a>
         </span>
@@ -342,7 +412,7 @@ diffMinutes*minutes)/seconds);
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#00bcd4>
+            <a href="/tags/Hexo" style=color:#1bccbc>
                 Hexo
             </a>
         </span>
@@ -412,7 +482,7 @@ myblog/public目录下是执行hexo g命令后生成的主页
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#ffa2c4>
+            <a href="/tags/Hexo" style=color:#1bccbc>
                 Hexo
             </a>
         </span>
@@ -484,7 +554,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;">&#x78;&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x78;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -596,7 +666,7 @@ hexo d
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style=color:#1bccbc>
+            <a href="/tags/Hexo" style=color:#ffa2c4>
                 Hexo
             </a>
         </span>
@@ -678,7 +748,7 @@ hexo d
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2018 - 2022 芥川龙之介
+            © 2021 - 2022 芥川龙之介
             <span class="footer-icon">
                 <a-icon type="flag" theme="filled" /></span>
             @Akutagawa Ryunosuke
@@ -687,52 +757,58 @@ hexo d
         <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/jwdnh">jwdnh Engine</a> 
 		</div>
         		
+		
+		
+		<script src="/js/highlight.min.js"></script>
+		<div style="font-size: 0.9rem">			
+			<span id="sitetime"></span>
+			<script language=javascript>
+			    function siteTime(){
+			            window.setTimeout("siteTime()", 1000);
+			            var seconds = 1000;
+			            var minutes = seconds * 60;
+			            var hours = minutes * 60;
+			            var days = hours * 24;
+			            var years = days * 365;
+			            var today = new Date();
+			            var todayYear = today.getFullYear();
+			            var todayMonth = today.getMonth()+1;
+			            var todayDate = today.getDate();
+			            var todayHour = today.getHours();
+			            var todayMinute = today.getMinutes();
+			            var todaySecond = today.getSeconds();
+			            /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+			            year - 作为date对象的年份，为4位年份值
+			            month - 0-11之间的整数，做为date对象的月份
+			            day - 1-31之间的整数，做为date对象的天数
+			            hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+			            minutes - 0-59之间的整数，做为date对象的分钟数
+			            seconds - 0-59之间的整数，做为date对象的秒数
+			            microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+			            var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+			            var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+			            var diff = t2-t1;
+			            var diffYears = Math.floor(diff/years);
+			            var diffDays = Math.floor((diff/days)-diffYears*365);
+			            var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+			            var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+			            var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+			            document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+			    }
+			    siteTime();
+			</script>
+		</div>		
+		<div style="font-size: 0.9rem">				
+		    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
+			<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
+			<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次 | 
+		    本站访客数<a id="busuanzi_value_site_uv"></a>人次
+		</div>
+			
     </div>
-	<div style="font-size: 0.9rem">
-		<span id="sitetime"></span>
-		<script language=javascript>
-		        function siteTime(){
-		                window.setTimeout("siteTime()", 1000);
-		                var seconds = 1000;
-		                var minutes = seconds * 60;
-		                var hours = minutes * 60;
-		                var days = hours * 24;
-		                var years = days * 365;
-		                var today = new Date();
-		                var todayYear = today.getFullYear();
-		                var todayMonth = today.getMonth()+1;
-		                var todayDate = today.getDate();
-		                var todayHour = today.getHours();
-		                var todayMinute = today.getMinutes();
-		                var todaySecond = today.getSeconds();
-		                /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-		                year - 作为date对象的年份，为4位年份值
-		                month - 0-11之间的整数，做为date对象的月份
-		                day - 1-31之间的整数，做为date对象的天数
-		                hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-		                minutes - 0-59之间的整数，做为date对象的分钟数
-		                seconds - 0-59之间的整数，做为date对象的秒数
-		                microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-		                var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
-		                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-		                var diff = t2-t1;
-		                var diffYears = Math.floor(diff/years);
-		                var diffDays = Math.floor((diff/days)-diffYears*365);
-		                var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-		                var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-		                var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		                document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-		        }
-		        siteTime();
-		</script>
-	</div>
-	<div style="font-size: 0.9rem">		
-	    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
-		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
-		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
-	    本站访客数<a id="busuanzi_value_site_uv"></a>人次
-	</div>
+	
+	
 
 
 
@@ -740,8 +816,44 @@ hexo d
 
 <script src="/js/highlight.min.js"></script>
 <script src="/js/particle.js"></script>
+
                 </div>
+				<div id="topt" style="position:fixed;z-index:9999;bottom:1.5rem;right:1.5rem;display:none;">
+					<a href="javascript:void(0);" onclick="toTop()">
+						<img src="/images/54.png" style="width:7rem;height:7rem;"/>
+						<span id="topheights" style="position:fixed;bottom:3rem;right:4rem;color:#161209">
+						</span>
+					</a>
+					<script language=javascript>
+						
+					    function toTop(){
+							document.documentElement.scrollTop = 0;
+					    }
+						function topHeight(){
+							document.documentElement.scrollTop = 0;
+							window.addEventListener('scroll', function (e) {
+								var d_h0 = document.documentElement.scrollHeight;
+								var d_h1 = document.documentElement.scrollTop;
+								var d_h2 = document.documentElement.clientHeight;
+								var d_h3 = d_h0 - d_h2
+								var d_h4 = parseInt((d_h1/d_h3)*100) + "%";
+							    var newLocal = d_h4;
+								document.getElementById("topheights").innerHTML=newLocal;
+								// document.getElementById("topheights").style.hover.color="#f40";
+								// document.getElementById("topheights").style.color="#f40";
+								var topt = document.getElementById("topt");
+								if(d_h1 > 0){
+									topt.style.display = "block"
+								}else{
+									topt.style.display = "none"
+								}
+							})
+						}				
+					    topHeight();
+					</script>
+				</div>
             </div>
+			
         </transition>
     </div>
 

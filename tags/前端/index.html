@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芥川龙之介 || Hexo写作</title>
+    <title>芥川龙之介前端</title>
     <meta name="author" content="Akutagawa Ryunosuke">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -150,59 +150,71 @@
 				
                 <div id="main">
                      
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
-    <div>
-        <h1>Hexo写作 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2022/10/14
-        </span>
-
-        
-
-        
-
-        <span class="tags">
-            <span class="icon">
-                <a-icon type="tags" theme="filled" />
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo" style=color:#00bcd4>
-                    Hexo
-                </a>
-            </span>
-            
-        </span>
-		<link rel="stylesheet"href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
-		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
-		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-		      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-		    </span>
-        
-    </div>	
-    <div class="content" v-pre>
-        <h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
-### 是三级标题
-#### 是四级标题
-注意直接的空格和空行
-[]() 是链接，如：[百度](www.baidu.com)
-</code></pre>
-<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
-3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
-4.图片命令：![](图片名字.图片格式)例如![](1.png)
-</code></pre>
-
-    </div>
-
+<div class="categories-tags">
     
+    <div class="all-s">
+        
+        
+        <span>
+            <a href="/tags/Hexo/" style=background:#ffa2c4>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                Hexo
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/前端/" style='background:linear-gradient(to right, #fbc2eb 0%, #bbd4ff 100%)'>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                前端
+            </a>
+        </span>
+        
+        
+    </div>
+    <div id="archives">
+        
+        <a-timeline>
+            <a-timeline-item color="#a5c2f5">
+                <a-card hoverable>
+                    <div class="item-time">2022/10/14</div>
+                    <a href="/2022/10/14/前端学习经验/">
+                        <h3>前端学习经验</h3>
+                    </a>
+                    <div class="info">
+                        
+
+                        
+                        <span class="tags">
+                            <span class="icon">
+                                <a-icon type="tags" theme="filled" />
+                            </span>
+                            
+                            <span class="tag">
+                                
+                                <a href="/tags/前端" style=color:#ffa2c4>
+                                    前端
+                                </a>
+                            </span>
+                            
+                        </span>
+                        
+                    </div>
+                </a-card>
+            </a-timeline-item>
+        </a-timeline>
+        
+    </div>
+    <script>
+        new Vue({
+            el: '#archives'
+        })
+    </script>
 </div>
                      
 <footer id="footer">

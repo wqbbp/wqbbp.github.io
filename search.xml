@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo写作</title>
+    <url>/2022/10/14/Hexo%E5%86%99%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
+### 是三级标题
+#### 是四级标题
+注意直接的空格和空行
+[]() 是链接，如：[百度](www.baidu.com)
+</code></pre>
+<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
+2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
+3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
+4.图片命令：![](图片名字.图片格式)例如![](1.png)
+</code></pre>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo基本命令</title>
     <url>/2022/10/10/Hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>记录一下Hexo的一些基本命令</p>
@@ -22,52 +41,6 @@
 <pre><code class="bash">$ hexo --draft
 </code></pre>
 <p>我的GitHub: <a href="https://github.com/jwdnh">GitHub</a></p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo写作</title>
-    <url>/2022/10/14/Hexo%E5%86%99%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
-### 是三级标题
-#### 是四级标题
-注意直接的空格和空行
-[]() 是链接，如：[百度](www.baidu.com)
-</code></pre>
-<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
-3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
-4.图片命令：![](图片名字.图片格式)例如![](1.png)
-</code></pre>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo框架+particle主题</title>
-    <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-particle%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
-<p>下载主题，我一般习惯在themes文件夹下打开命令提示符页面</p>
-<pre><code class="cmd">git clone https://github.com/korilin/hexo-theme-particle.git particle
-</code></pre>
-<p>这个是该主题的说明：<a href="https://korilin.github.io/hexo-theme-particle-demo/full/public/">particle主题</a></p>
-<p>打开站点配置文件 _config.yml<br>鼠标拖到最下面，将主题名称修改为particle</p>
-<pre><code># Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: particle
-</code></pre>
-<p>以后如果选择其他主题的话，可以在themes文件夹下下载主题之后进入配置文件替换</p>
-<h4 id="该主题的一些注意事项："><a href="#该主题的一些注意事项：" class="headerlink" title="该主题的一些注意事项："></a>该主题的一些注意事项：</h4><pre><code>通过命令生成博文.md后可以在myblog/source/_posts目录下修改博文
-myblog/public目录下是执行hexo g命令后生成的主页
-在myblog/themes/particle/layout里修改页面的格式
-在myblog/themes/particle/source/css/maiden-color.styl里修改样式的颜色
-在myblog/themes/particle/source/_config.yml里修改页面(在同级目录下新建images文件夹，将照片保存至此处)
-在myblog/_config.yml里修改title和author
-</code></pre>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -111,7 +84,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;">&#x78;&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x78;&#x78;&#x78;&#120;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -145,16 +118,70 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>Hexo框架+particle主题</title>
+    <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-particle%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
+<p>下载主题，我一般习惯在themes文件夹下打开命令提示符页面</p>
+<pre><code class="cmd">git clone https://github.com/korilin/hexo-theme-particle.git particle
+</code></pre>
+<p>这个是该主题的说明：<a href="https://korilin.github.io/hexo-theme-particle-demo/full/public/">particle主题</a></p>
+<p>打开站点配置文件 _config.yml<br>鼠标拖到最下面，将主题名称修改为particle</p>
+<pre><code># Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: particle
+</code></pre>
+<p>以后如果选择其他主题的话，可以在themes文件夹下下载主题之后进入配置文件替换</p>
+<h4 id="该主题的一些注意事项："><a href="#该主题的一些注意事项：" class="headerlink" title="该主题的一些注意事项："></a>该主题的一些注意事项：</h4><pre><code>通过命令生成博文.md后可以在myblog/source/_posts目录下修改博文
+myblog/public目录下是执行hexo g命令后生成的主页
+在myblog/themes/particle/layout里修改页面的格式
+在myblog/themes/particle/source/css/maiden-color.styl里修改样式的颜色
+在myblog/themes/particle/source/_config.yml里修改页面(在同级目录下新建images文件夹，将照片保存至此处)
+在myblog/_config.yml里修改title和author
+</code></pre>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端学习经验</title>
+    <url>/2022/10/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h2 id="前端学习经验"><a href="#前端学习经验" class="headerlink" title="前端学习经验"></a>前端学习经验</h2><h4 id="页面显示与隐藏"><a href="#页面显示与隐藏" class="headerlink" title="页面显示与隐藏"></a>页面显示与隐藏</h4><pre><code>先在div标签中将display属性设置成none
+然后对js进行操作,用var xx = document.getElementById(&quot;xx&quot;);
+获取某个id,接着通过xx.style.display = &quot;block&quot;
+将页面设置成显示，值为none表示隐藏
+</code></pre>
+<h4 id="scroll的一些知识"><a href="#scroll的一些知识" class="headerlink" title="scroll的一些知识"></a>scroll的一些知识</h4><pre><code>document.documentElement.scrollHeight是当前页面的高度
+document.documentElement.scrollTop是scroll的实时高度
+scroll的最大高度=document.documentElement.scrollHeight-document.documentElement.clientHeight
+通过如下代码实时获取scroll状态
+</code></pre>
+<pre><code class="js">window.addEventListener(&#39;scroll&#39;, function (e) &#123;	
+&#125;)
+</code></pre>
+<h4 id="img标签包裹span样式实现"><a href="#img标签包裹span样式实现" class="headerlink" title="img标签包裹span样式实现"></a>img标签包裹span样式实现</h4><pre><code>在包裹他们的div标签中设置position:fixed,并将z-index设置一个比主页面大的值（如9999）
+通过bottom和right等属性来固定它的位置
+</code></pre>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo在页脚添加总访问量访客数和站点运行时间</title>
     <url>/2022/10/14/Hexo%E5%9C%A8%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F%E8%AE%BF%E5%AE%A2%E6%95%B0%E5%92%8C%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</url>
     <content><![CDATA[<h2 id="Hexo在页脚添加总访问量和访客数"><a href="#Hexo在页脚添加总访问量和访客数" class="headerlink" title="Hexo在页脚添加总访问量和访客数"></a>Hexo在页脚添加总访问量和访客数</h2><h3 id="打开站点配置文件-config-yml添加"><a href="#打开站点配置文件-config-yml添加" class="headerlink" title="打开站点配置文件 _config.yml添加"></a>打开站点配置文件 _config.yml添加</h3><pre><code>busuanzi:
 enable: true
 </code></pre>
 <h3 id="在对应的footer-ejs下添加"><a href="#在对应的footer-ejs下添加" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 13px&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; 
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0&quot;&gt;
+    &lt;script src=&quot;https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0&quot;&gt;&lt;/script&gt;
+    &lt;script async=&quot;&quot; src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+    本站总访问量  &lt;a id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/a&gt; 次,
+    本站访客数&lt;a id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/a&gt;人次
+&lt;/div&gt;
 </code></pre>
-<p>href&#x3D;”<a href="https://widget.heweather.net/standard/static/css/he-standard.css">https://widget.heweather.net/standard/static/css/he-standard.css</a>?<br>v&#x3D;1.4.0”&gt;<br>        <script src="https://widget.heweather.net/standard/static/js/he-standard.js?
-v=1.4.0"></script><br>        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><br>        本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,<br>        本站访客数<a id="busuanzi_value_site_uv"></a>人次<br>    </p>
 <h2 id="Hexo在页脚添加站点运行时间"><a href="#Hexo在页脚添加站点运行时间" class="headerlink" title="Hexo在页脚添加站点运行时间"></a>Hexo在页脚添加站点运行时间</h2><h3 id="在对应的footer-ejs下添加-1"><a href="#在对应的footer-ejs下添加-1" class="headerlink" title="在对应的footer.ejs下添加"></a>在对应的footer.ejs下添加</h3><pre><code>&lt;div style=&quot;font-size: 0.9rem&quot;&gt;
         &lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;
         &lt;script language=javascript&gt;

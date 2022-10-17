@@ -147,7 +147,7 @@
 
 </nav>
                 </div>
-
+				
                 <div id="main">
                      
 <link rel="stylesheet" href="/css/post-body.css">
@@ -174,15 +174,19 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style=color:#1bccbc>
+                <a href="/tags/Hexo" style=color:#ff7d73>
                     Hexo
                 </a>
             </span>
             
         </span>
+		<link rel="stylesheet"href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
+		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
+		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		    </span>
         
-    </div>
-
+    </div>	
     <div class="content" v-pre>
         <p>记录一下Hexo的一些基本命令</p>
 <h2 id="Hexo的一些基本命令"><a href="#Hexo的一些基本命令" class="headerlink" title="Hexo的一些基本命令"></a>Hexo的一些基本命令</h2><h3 id="创建一个新的页面"><a href="#创建一个新的页面" class="headerlink" title="创建一个新的页面"></a>创建一个新的页面</h3><pre><code class="bash">$ hexo new post [标题]
@@ -212,7 +216,7 @@
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2018 - 2022 芥川龙之介
+            © 2021 - 2022 芥川龙之介
             <span class="footer-icon">
                 <a-icon type="flag" theme="filled" /></span>
             @Akutagawa Ryunosuke
@@ -221,52 +225,58 @@
         <div>Based on the <a target="_blank" rel="noopener" href="https://github.com/jwdnh">jwdnh Engine</a> 
 		</div>
         		
+		
+		
+		<script src="/js/highlight.min.js"></script>
+		<div style="font-size: 0.9rem">			
+			<span id="sitetime"></span>
+			<script language=javascript>
+			    function siteTime(){
+			            window.setTimeout("siteTime()", 1000);
+			            var seconds = 1000;
+			            var minutes = seconds * 60;
+			            var hours = minutes * 60;
+			            var days = hours * 24;
+			            var years = days * 365;
+			            var today = new Date();
+			            var todayYear = today.getFullYear();
+			            var todayMonth = today.getMonth()+1;
+			            var todayDate = today.getDate();
+			            var todayHour = today.getHours();
+			            var todayMinute = today.getMinutes();
+			            var todaySecond = today.getSeconds();
+			            /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+			            year - 作为date对象的年份，为4位年份值
+			            month - 0-11之间的整数，做为date对象的月份
+			            day - 1-31之间的整数，做为date对象的天数
+			            hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+			            minutes - 0-59之间的整数，做为date对象的分钟数
+			            seconds - 0-59之间的整数，做为date对象的秒数
+			            microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+			            var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
+			            var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+			            var diff = t2-t1;
+			            var diffYears = Math.floor(diff/years);
+			            var diffDays = Math.floor((diff/days)-diffYears*365);
+			            var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+			            var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+			            var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+			            document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+			    }
+			    siteTime();
+			</script>
+		</div>		
+		<div style="font-size: 0.9rem">				
+		    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
+			<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
+			<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次 | 
+		    本站访客数<a id="busuanzi_value_site_uv"></a>人次
+		</div>
+			
     </div>
-	<div style="font-size: 0.9rem">
-		<span id="sitetime"></span>
-		<script language=javascript>
-		        function siteTime(){
-		                window.setTimeout("siteTime()", 1000);
-		                var seconds = 1000;
-		                var minutes = seconds * 60;
-		                var hours = minutes * 60;
-		                var days = hours * 24;
-		                var years = days * 365;
-		                var today = new Date();
-		                var todayYear = today.getFullYear();
-		                var todayMonth = today.getMonth()+1;
-		                var todayDate = today.getDate();
-		                var todayHour = today.getHours();
-		                var todayMinute = today.getMinutes();
-		                var todaySecond = today.getSeconds();
-		                /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-		                year - 作为date对象的年份，为4位年份值
-		                month - 0-11之间的整数，做为date对象的月份
-		                day - 1-31之间的整数，做为date对象的天数
-		                hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-		                minutes - 0-59之间的整数，做为date对象的分钟数
-		                seconds - 0-59之间的整数，做为date对象的秒数
-		                microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-		                var t1 = Date.UTC(2019,07,16,16,26,13); //建站时间
-		                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-		                var diff = t2-t1;
-		                var diffYears = Math.floor(diff/years);
-		                var diffDays = Math.floor((diff/days)-diffYears*365);
-		                var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-		                var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-		                var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		                document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-		        }
-		        siteTime();
-		</script>
-	</div>
-	<div style="font-size: 0.9rem">		
-	    <link rel="stylesheet" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
-		<script src="https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0"></script>
-		<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	    本站总访问量  <a id="busuanzi_value_site_pv"></a> 次,
-	    本站访客数<a id="busuanzi_value_site_uv"></a>人次
-	</div>
+	
+	
 
 
 
@@ -274,8 +284,44 @@
 
 <script src="/js/highlight.min.js"></script>
 <script src="/js/particle.js"></script>
+
                 </div>
+				<div id="topt" style="position:fixed;z-index:9999;bottom:1.5rem;right:1.5rem;display:none;">
+					<a href="javascript:void(0);" onclick="toTop()">
+						<img src="/images/54.png" style="width:7rem;height:7rem;"/>
+						<span id="topheights" style="position:fixed;bottom:3rem;right:4rem;color:#161209">
+						</span>
+					</a>
+					<script language=javascript>
+						
+					    function toTop(){
+							document.documentElement.scrollTop = 0;
+					    }
+						function topHeight(){
+							document.documentElement.scrollTop = 0;
+							window.addEventListener('scroll', function (e) {
+								var d_h0 = document.documentElement.scrollHeight;
+								var d_h1 = document.documentElement.scrollTop;
+								var d_h2 = document.documentElement.clientHeight;
+								var d_h3 = d_h0 - d_h2
+								var d_h4 = parseInt((d_h1/d_h3)*100) + "%";
+							    var newLocal = d_h4;
+								document.getElementById("topheights").innerHTML=newLocal;
+								// document.getElementById("topheights").style.hover.color="#f40";
+								// document.getElementById("topheights").style.color="#f40";
+								var topt = document.getElementById("topt");
+								if(d_h1 > 0){
+									topt.style.display = "block"
+								}else{
+									topt.style.display = "none"
+								}
+							})
+						}				
+					    topHeight();
+					</script>
+				</div>
             </div>
+			
         </transition>
     </div>
 

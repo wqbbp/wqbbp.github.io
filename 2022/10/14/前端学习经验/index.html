@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芥川龙之介 || Hexo写作</title>
+    <title>芥川龙之介 || 前端学习经验</title>
     <meta name="author" content="Akutagawa Ryunosuke">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -153,7 +153,7 @@
 <link rel="stylesheet" href="/css/post-body.css">
 <div class="article">
     <div>
-        <h1>Hexo写作 </h1>
+        <h1>前端学习经验 </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -174,8 +174,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style=color:#00bcd4>
-                    Hexo
+                <a href="/tags/前端" style=color:#879cff>
+                    前端
                 </a>
             </span>
             
@@ -188,16 +188,21 @@
         
     </div>	
     <div class="content" v-pre>
-        <h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
-### 是三级标题
-#### 是四级标题
-注意直接的空格和空行
-[]() 是链接，如：[百度](www.baidu.com)
+        <h2 id="前端学习经验"><a href="#前端学习经验" class="headerlink" title="前端学习经验"></a>前端学习经验</h2><h4 id="页面显示与隐藏"><a href="#页面显示与隐藏" class="headerlink" title="页面显示与隐藏"></a>页面显示与隐藏</h4><pre><code>先在div标签中将display属性设置成none
+然后对js进行操作,用var xx = document.getElementById(&quot;xx&quot;);
+获取某个id,接着通过xx.style.display = &quot;block&quot;
+将页面设置成显示，值为none表示隐藏
 </code></pre>
-<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
-3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
-4.图片命令：![](图片名字.图片格式)例如![](1.png)
+<h4 id="scroll的一些知识"><a href="#scroll的一些知识" class="headerlink" title="scroll的一些知识"></a>scroll的一些知识</h4><pre><code>document.documentElement.scrollHeight是当前页面的高度
+document.documentElement.scrollTop是scroll的实时高度
+scroll的最大高度=document.documentElement.scrollHeight-document.documentElement.clientHeight
+通过如下代码实时获取scroll状态
+</code></pre>
+<pre><code class="js">window.addEventListener(&#39;scroll&#39;, function (e) &#123;	
+&#125;)
+</code></pre>
+<h4 id="img标签包裹span样式实现"><a href="#img标签包裹span样式实现" class="headerlink" title="img标签包裹span样式实现"></a>img标签包裹span样式实现</h4><pre><code>在包裹他们的div标签中设置position:fixed,并将z-index设置一个比主页面大的值（如9999）
+通过bottom和right等属性来固定它的位置
 </code></pre>
 
     </div>
