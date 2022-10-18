@@ -183,68 +183,263 @@
 #home-card .card-style .avatar {
   text-align: center;
   margin: auto;
-  width: 106px;
-  height: 106px;
-  border-radius: 50%;
-  border: side-card-avatar 3px solid;
+  width: 116px;
+  height: 116px;
+  border: #fff 3px solid;
 }
 #home-card .card-style .avatar img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
 }
-#home-card img:hover {
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  transform: rotateZ(270deg);
-}
-#home-card img:hover .name {
-  margin: 10px auto;
-  color: text-font;
-  text-transform: capitalize;
-}
-#home-card img:hover .descriptions {
-  margin: 20px auto;
-  width: 85%;
-}
-#home-card img:hover .icon-links {
-  width: 85%;
-  margin: 10px auto;
-  padding: 8px 15px;
-  border-top: #cdcdcd solid 1px;
-  border-bottom: #cdcdcd solid 1px;
-}
-#home-card img:hover .icon-links a {
-  color: label-font;
-  font-size: 18px;
-  padding: 3px 5px;
-  border-radius: 5px;
-}
-#home-card img:hover .icon-links a:hover {
-  color: #fff;
-  background: default-link;
-}
-#home-card img:hover .icon-links .icon-link {
-  margin: 5px;
-}
-#home-card img:hover .friend-links {
-  margin: 30px auto;
-}
-#home-card img:hover .friend-links .friend-link {
-  margin: 5px auto;
+.avatar-item {
+  width: 106px;
+  height: 106px;
   text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  border: side-card-avatar 3px solid;
+  box-shadow: 0 0 1.5em #f7f7f7;
 }
-#home-card img:hover .friend-links .friend-link a {
-  display: inline-block;
-  width: 140px;
-  line-height: 3;
-  color: label-font;
-  font-size: 16px;
-  border-radius: 15px;
+.avatar-item:hover {
+  animation-delay: 0s;
+  animation-name: shock;
+  animation-duration: 0.15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
-#home-card img:hover .friend-links .friend-link a:hover {
-  background: side-card-button;
-  color: #fff;
+@-moz-keyframes shock {
+  0% {
+    margin-right: 4px;
+    margin-top: 1px;
+  }
+  100% {
+    margin-right: 0px;
+    margin-top: -1px;
+  }
+  .name {
+    margin: 10px auto;
+    color: text-font;
+    text-transform: capitalize;
+  }
+  .descriptions {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .icon-links {
+    width: 85%;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border-top: #cdcdcd solid 1px;
+    border-bottom: #cdcdcd solid 1px;
+  }
+  a {
+    color: label-font;
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
+  :hover {
+    color: #fff;
+    background: default-link;
+  }
+  .icon-link {
+    margin: 5px;
+  }
+  .friend-links {
+    margin: 30px auto;
+  }
+  .friend-link {
+    margin: 5px auto;
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    width: 140px;
+    line-height: 3;
+    color: label-font;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+  :hover {
+    background: side-card-button;
+    color: #fff;
+  }
+}
+@-webkit-keyframes shock {
+  0% {
+    margin-right: 4px;
+    margin-top: 1px;
+  }
+  100% {
+    margin-right: 0px;
+    margin-top: -1px;
+  }
+  .name {
+    margin: 10px auto;
+    color: text-font;
+    text-transform: capitalize;
+  }
+  .descriptions {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .icon-links {
+    width: 85%;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border-top: #cdcdcd solid 1px;
+    border-bottom: #cdcdcd solid 1px;
+  }
+  a {
+    color: label-font;
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
+  :hover {
+    color: #fff;
+    background: default-link;
+  }
+  .icon-link {
+    margin: 5px;
+  }
+  .friend-links {
+    margin: 30px auto;
+  }
+  .friend-link {
+    margin: 5px auto;
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    width: 140px;
+    line-height: 3;
+    color: label-font;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+  :hover {
+    background: side-card-button;
+    color: #fff;
+  }
+}
+@-o-keyframes shock {
+  0% {
+    margin-right: 4px;
+    margin-top: 1px;
+  }
+  100% {
+    margin-right: 0px;
+    margin-top: -1px;
+  }
+  .name {
+    margin: 10px auto;
+    color: text-font;
+    text-transform: capitalize;
+  }
+  .descriptions {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .icon-links {
+    width: 85%;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border-top: #cdcdcd solid 1px;
+    border-bottom: #cdcdcd solid 1px;
+  }
+  a {
+    color: label-font;
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
+  :hover {
+    color: #fff;
+    background: default-link;
+  }
+  .icon-link {
+    margin: 5px;
+  }
+  .friend-links {
+    margin: 30px auto;
+  }
+  .friend-link {
+    margin: 5px auto;
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    width: 140px;
+    line-height: 3;
+    color: label-font;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+  :hover {
+    background: side-card-button;
+    color: #fff;
+  }
+}
+@keyframes shock {
+  0% {
+    margin-right: 4px;
+    margin-top: 1px;
+  }
+  100% {
+    margin-right: 0px;
+    margin-top: -1px;
+  }
+  .name {
+    margin: 10px auto;
+    color: text-font;
+    text-transform: capitalize;
+  }
+  .descriptions {
+    margin: 20px auto;
+    width: 85%;
+  }
+  .icon-links {
+    width: 85%;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border-top: #cdcdcd solid 1px;
+    border-bottom: #cdcdcd solid 1px;
+  }
+  a {
+    color: label-font;
+    font-size: 18px;
+    padding: 3px 5px;
+    border-radius: 5px;
+  }
+  :hover {
+    color: #fff;
+    background: default-link;
+  }
+  .icon-link {
+    margin: 5px;
+  }
+  .friend-links {
+    margin: 30px auto;
+  }
+  .friend-link {
+    margin: 5px auto;
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    width: 140px;
+    line-height: 3;
+    color: label-font;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+  :hover {
+    background: side-card-button;
+    color: #fff;
+  }
 }
 @-moz-keyframes loop1 {
   0% {

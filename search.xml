@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo写作</title>
+    <url>/2022/10/14/Hexo%E5%86%99%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
+### 是三级标题
+#### 是四级标题
+注意直接的空格和空行
+[]() 是链接，如：[百度](www.baidu.com)
+</code></pre>
+<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
+2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
+3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
+4.图片命令：![](图片名字.图片格式)例如![](1.png)
+</code></pre>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo在页脚添加总访问量访客数和站点运行时间</title>
     <url>/2022/10/14/Hexo%E5%9C%A8%E9%A1%B5%E8%84%9A%E6%B7%BB%E5%8A%A0%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F%E8%AE%BF%E5%AE%A2%E6%95%B0%E5%92%8C%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</url>
     <content><![CDATA[<h2 id="Hexo在页脚添加总访问量和访客数"><a href="#Hexo在页脚添加总访问量和访客数" class="headerlink" title="Hexo在页脚添加总访问量和访客数"></a>Hexo在页脚添加总访问量和访客数</h2><h3 id="打开站点配置文件-config-yml添加"><a href="#打开站点配置文件-config-yml添加" class="headerlink" title="打开站点配置文件 _config.yml添加"></a>打开站点配置文件 _config.yml添加</h3><pre><code>busuanzi:
@@ -101,25 +120,6 @@ diffMinutes*minutes)/seconds);
       </tags>
   </entry>
   <entry>
-    <title>Hexo写作</title>
-    <url>/2022/10/14/Hexo%E5%86%99%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="Hexo写作"><a href="#Hexo写作" class="headerlink" title="Hexo写作"></a>Hexo写作</h2><h3 id="一些基本命令"><a href="#一些基本命令" class="headerlink" title="一些基本命令"></a>一些基本命令</h3><pre><code>## 是二级标题
-### 是三级标题
-#### 是四级标题
-注意直接的空格和空行
-[]() 是链接，如：[百度](www.baidu.com)
-</code></pre>
-<h3 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h3><pre><code>1.设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save
-3.这个时候生成的博文.md就会多一个与博文同名的文件夹，该文件夹用于保存图片
-4.图片命令：![](图片名字.图片格式)例如![](1.png)
-</code></pre>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo框架+GitHub搭建个人博客</title>
     <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><h3 id="安装Hexo前置准备"><a href="#安装Hexo前置准备" class="headerlink" title="安装Hexo前置准备"></a>安装Hexo前置准备</h3><pre><code>需要先安装node.js(版本尽量是最新版本)和git软件。
@@ -157,7 +157,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#x78;&#120;&#x78;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#x6d;">&#120;&#x78;&#120;&#x78;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#120;&#120;&#x78;&#x78;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#120;&#120;&#x78;&#x78;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -191,6 +191,30 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>前端学习经验</title>
+    <url>/2022/10/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h2 id="前端学习经验"><a href="#前端学习经验" class="headerlink" title="前端学习经验"></a>前端学习经验</h2><h4 id="页面显示与隐藏"><a href="#页面显示与隐藏" class="headerlink" title="页面显示与隐藏"></a>页面显示与隐藏</h4><pre><code>先在div标签中将display属性设置成none
+然后对js进行操作,用var xx = document.getElementById(&quot;xx&quot;);
+获取某个id,接着通过xx.style.display = &quot;block&quot;
+将页面设置成显示，值为none表示隐藏
+</code></pre>
+<h4 id="scroll的一些知识"><a href="#scroll的一些知识" class="headerlink" title="scroll的一些知识"></a>scroll的一些知识</h4><pre><code>document.documentElement.scrollHeight是当前页面的高度
+document.documentElement.scrollTop是scroll的实时高度
+scroll的最大高度=document.documentElement.scrollHeight-document.documentElement.clientHeight
+通过如下代码实时获取scroll状态
+</code></pre>
+<pre><code class="js">window.addEventListener(&#39;scroll&#39;, function (e) &#123;	
+&#125;)
+</code></pre>
+<h4 id="img标签包裹span样式实现"><a href="#img标签包裹span样式实现" class="headerlink" title="img标签包裹span样式实现"></a>img标签包裹span样式实现</h4><pre><code>在包裹他们的div标签中设置position:fixed,并将z-index设置一个比主页面大的值（如9999）
+通过bottom和right等属性来固定它的位置
+</code></pre>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo框架+particle主题</title>
     <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-particle%E4%B8%BB%E9%A2%98/</url>
     <content><![CDATA[<h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
@@ -215,30 +239,6 @@ myblog/public目录下是执行hexo g命令后生成的主页
 ]]></content>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端学习经验</title>
-    <url>/2022/10/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/</url>
-    <content><![CDATA[<h2 id="前端学习经验"><a href="#前端学习经验" class="headerlink" title="前端学习经验"></a>前端学习经验</h2><h4 id="页面显示与隐藏"><a href="#页面显示与隐藏" class="headerlink" title="页面显示与隐藏"></a>页面显示与隐藏</h4><pre><code>先在div标签中将display属性设置成none
-然后对js进行操作,用var xx = document.getElementById(&quot;xx&quot;);
-获取某个id,接着通过xx.style.display = &quot;block&quot;
-将页面设置成显示，值为none表示隐藏
-</code></pre>
-<h4 id="scroll的一些知识"><a href="#scroll的一些知识" class="headerlink" title="scroll的一些知识"></a>scroll的一些知识</h4><pre><code>document.documentElement.scrollHeight是当前页面的高度
-document.documentElement.scrollTop是scroll的实时高度
-scroll的最大高度=document.documentElement.scrollHeight-document.documentElement.clientHeight
-通过如下代码实时获取scroll状态
-</code></pre>
-<pre><code class="js">window.addEventListener(&#39;scroll&#39;, function (e) &#123;	
-&#125;)
-</code></pre>
-<h4 id="img标签包裹span样式实现"><a href="#img标签包裹span样式实现" class="headerlink" title="img标签包裹span样式实现"></a>img标签包裹span样式实现</h4><pre><code>在包裹他们的div标签中设置position:fixed,并将z-index设置一个比主页面大的值（如9999）
-通过bottom和right等属性来固定它的位置
-</code></pre>
-]]></content>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
 </search>
