@@ -27,9 +27,14 @@ function getBrowserInfo() {
         return agent.match(regStr_saf);
     }
 }
+// ip_contents.innerHTML = getBrowserInfo();
+// var ip_content = document.querySelector(".ip_contents");
 
-var ip_content = document.querySelector(".ip_content");
-
-if (ip_content != null && typeof (returnCitySN) != undefined) {
-    ip_content.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
+// if (ip_content != null && typeof (returnCitySN) != undefined) {
+//     ip_contents.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
+// }else{
+// 	ip_contents.innerHTML = getBrowserInfo()+"|"+ip_content+"|"+returnCitySN["cname"]+"|"+returnCitySN["cip"];
+// }
+if (typeof (returnCitySN) != undefined) {
+    ip_contents.innerHTML = '欢迎来自 <span class="p red">' + returnCitySN["cname"] + "</span> 的小伙伴<br>" + "访问IP为： <span class='p cyan'>" + returnCitySN["cip"] + "</span><br>浏览器版本：<span class='p blue'>" + getBrowserInfo() + '</span>';
 }
