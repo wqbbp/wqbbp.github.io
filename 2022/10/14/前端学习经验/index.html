@@ -79,6 +79,10 @@
             <span>标签</span>
         </a>
         
+		<div class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+			<label>搜索</label>
+			<input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+		</div>
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -129,10 +133,6 @@
             
         </div>
         <div class="curtain" v-show="menu_show"></div>
-		<div class="search" action="/search/index.html" method="get" accept-charset="utf-8">
-			<label>搜索</label>
-			<input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
-		</div>
     </div>
 </nav>
 <script type="text/javascript">
@@ -171,7 +171,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/前端" style=color:#879cff>
+                <a href="/tags/前端" style=color:#00bcd4>
                     前端
                 </a>
             </span>
