@@ -45,8 +45,8 @@
             <div v-show="show_page" style="display: none;">
                 <div id="menu_show">
                      
-<nav id="menu">
-    <div class="desktop-menu">
+<nav id="menu" style="display:flex;">
+    <div class="desktop-menu" style="width:50%">
         <a href="/">
             <span class="title">芥川龙之介</span>
         </a>
@@ -79,11 +79,10 @@
             <span>标签</span>
         </a>
         
-		<div class="search" action="/search/index.html" method="get" accept-charset="utf-8">
-			<label>搜索</label>
-			<input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
-		</div>
     </div>
+	<div style="width:50%;text-align: right;margin-right: 5rem;" class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+		<input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="搜索" />
+	</div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
         <div :class="'title'" @click="menu_show=!menu_show">
@@ -153,7 +152,7 @@
         
         
         <span>
-            <a href="/tags/Hexo/" style=background:#879cff>
+            <a href="/tags/Hexo/" style=background:#00bcd4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -194,7 +193,7 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/前端" style=color:#ffa2c4>
+                                <a href="/tags/前端" style=color:#879cff>
                                     前端
                                 </a>
                             </span>
