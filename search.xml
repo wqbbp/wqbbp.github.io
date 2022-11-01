@@ -120,33 +120,6 @@ diffMinutes*minutes)/seconds);
       </tags>
   </entry>
   <entry>
-    <title>Hexo框架+particle主题</title>
-    <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-particle%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
-<p>下载主题，我一般习惯在themes文件夹下打开命令提示符页面</p>
-<pre><code class="cmd">git clone https://github.com/korilin/hexo-theme-particle.git particle
-</code></pre>
-<p>这个是该主题的说明：<a href="https://korilin.github.io/hexo-theme-particle-demo/full/public/">particle主题</a></p>
-<p>打开站点配置文件 _config.yml<br>鼠标拖到最下面，将主题名称修改为particle</p>
-<pre><code># Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: particle
-</code></pre>
-<p>以后如果选择其他主题的话，可以在themes文件夹下下载主题之后进入配置文件替换</p>
-<h4 id="该主题的一些注意事项："><a href="#该主题的一些注意事项：" class="headerlink" title="该主题的一些注意事项："></a>该主题的一些注意事项：</h4><pre><code>通过命令生成博文.md后可以在myblog/source/_posts目录下修改博文
-myblog/public目录下是执行hexo g命令后生成的主页
-在myblog/themes/particle/layout里修改页面的格式
-在myblog/themes/particle/source/css/maiden-color.styl里修改样式的颜色
-在myblog/themes/particle/source/_config.yml里修改页面(在同级目录下新建images文件夹，将照片保存至此处)
-在myblog/_config.yml里修改title和author
-</code></pre>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo框架+GitHub搭建个人博客</title>
     <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><h3 id="安装Hexo前置准备"><a href="#安装Hexo前置准备" class="headerlink" title="安装Hexo前置准备"></a>安装Hexo前置准备</h3><pre><code>需要先安装node.js(版本尽量是最新版本)和git软件。
@@ -184,7 +157,7 @@ git config --global user.email
 </code></pre>
 <h4 id="2-生成SSH"><a href="#2-生成SSH" class="headerlink" title="2.生成SSH"></a>2.生成SSH</h4><pre><code class="git">ssh-keygen -t rsa -C [email]
 </code></pre>
-<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#120;&#120;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x78;&#x78;&#120;&#120;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
+<p>示例：ssh-keygen -t rsa -C <a href="mailto:&#x78;&#x78;&#x78;&#x78;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x78;&#x78;&#x78;&#x78;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a><br>然后敲三次回车<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init3.jpg">	</p>
 <p>在C:\Users\当前用户名下会多一个.ssh的文件夹，里面带.pub后缀的就是你刚刚生成的公钥，复制里面的内容（包括邮箱）</p>
 <p>进入GitHub，点击设置<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init4.jpg">	<br>选择SSH，点击右上角新增<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init5.jpg">	</p>
 <p>发现我们需要一个密钥，把我们刚刚复制的密钥粘进去，Title命名无要求<br><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init6.jpg"></p>
@@ -212,6 +185,33 @@ hexo d
 <p>最后回到github上查看自己的仓库看看是否部署成功</p>
 <p>将_config.yml文件的url处修改为自己GitHub的地址，如：url: <a href="https://jwdnh.github.io/">https://jwdnh.github.io</a><br>这样输入这个地址打开的就是你的网页了</p>
 <p><img src="/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/init9.jpg"></p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo框架+particle主题</title>
+    <url>/2022/10/14/Hexo%E6%A1%86%E6%9E%B6-particle%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="particle主题"><a href="#particle主题" class="headerlink" title="particle主题"></a>particle主题</h3><h4 id="下载替换"><a href="#下载替换" class="headerlink" title="下载替换"></a>下载替换</h4><p>注意，particle主题作者已经停止运维。</p>
+<p>下载主题，我一般习惯在themes文件夹下打开命令提示符页面</p>
+<pre><code class="cmd">git clone https://github.com/korilin/hexo-theme-particle.git particle
+</code></pre>
+<p>这个是该主题的说明：<a href="https://korilin.github.io/hexo-theme-particle-demo/full/public/">particle主题</a></p>
+<p>打开站点配置文件 _config.yml<br>鼠标拖到最下面，将主题名称修改为particle</p>
+<pre><code># Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: particle
+</code></pre>
+<p>以后如果选择其他主题的话，可以在themes文件夹下下载主题之后进入配置文件替换</p>
+<h4 id="该主题的一些注意事项："><a href="#该主题的一些注意事项：" class="headerlink" title="该主题的一些注意事项："></a>该主题的一些注意事项：</h4><pre><code>通过命令生成博文.md后可以在myblog/source/_posts目录下修改博文
+myblog/public目录下是执行hexo g命令后生成的主页
+在myblog/themes/particle/layout里修改页面的格式
+在myblog/themes/particle/source/css/maiden-color.styl里修改样式的颜色
+在myblog/themes/particle/source/_config.yml里修改页面(在同级目录下新建images文件夹，将照片保存至此处)
+在myblog/_config.yml里修改title和author
+</code></pre>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
